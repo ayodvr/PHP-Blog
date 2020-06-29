@@ -1,0 +1,21 @@
+/* Header button css............................
+.....................................*/
+ #btn1 {
+        border-radius: 50px;
+        border-color: #33ccff;
+        background-color: #33ccff;
+    }
+    
+ #btn2 {
+        border-radius: 50px;
+        border-color: #40ff00;
+        background-color: #40ff00;
+    }
+    
+ #btn1 a:hover,a:focus,a:active{
+        color: #ffe6f7;
+    }
+    
+ #btn2 a:hover,a:focus,a:active{
+        color: #ffe6f7;
+    }
