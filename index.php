@@ -117,46 +117,46 @@ $CurrentUser = new User();
                 <li><a href="style-guide.html" title="">Styles</a></li>
                 <li><a href="page-about.html" title="">About</a></li>
                 <li><a href="page-contact.html" title="">Contact</a></li>
-            
+
                 <button id=""><a href="login.php" title="">Log in</a></button>
-                <button id=""><a href="register.php" title="">Register</a></button> 
-            </ul> 
-                
+                <button id=""><a href="register.php" title="">Register</a></button>
+            </ul>
+
             <!-- end header__nav -->
 
             <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
 
         </nav> <!-- end header__nav-wrap -->
-        
-        
+
+
 
     </header> <!-- s-header -->
 
 
-    <!-- featured 
+    <!-- featured
     ================================================== -->
-    
+
     <section class="s-featured">
-        
+
         <div class="row">
-        
+
             <div class="col-full">
                 <?php if($select_res != ""){
-		  
+
                  $x=0;
-          
+
                  ?>
                 <div class="featured-slider featured" data-aos="zoom-in">
                     <?php
                         foreach($select_res as $rec){
                             if($rec['image'] == "") continue;
-                        
+
                     ?>
                     <div class="featured__slide">
                         <div class="entry">
 
                             <div class="entry__background"><img src="./image/<?=$rec['image']?>" width="891px" height="600px"/></div>
-                            
+
                             <div class="entry__content">
 
                                 <h1><a href="#0" title=""><?=$rec['title']?></a></h1>
@@ -171,14 +171,14 @@ $CurrentUser = new User();
                                     </ul>
                                 </div>
                             </div> <!-- end entry__content -->
-                            
+
                         </div> <!-- end entry -->
                     </div> <!-- end featured__slide -->
                     <?php
                     }
                         }
                     ?>
-                    
+
                 </div> <!-- end featured -->
 
             </div> <!-- end col-full -->
@@ -189,12 +189,12 @@ $CurrentUser = new User();
     <!-- s-content
     ================================================== -->
     <?php if($select_res != ""){
-		  
-                 
-          
+
+
+
                  ?>
     <section class="s-content">
-        
+
         <div class="row entries-wrap wide">
             <div class="entries">
                     <?php $x=0;
@@ -202,25 +202,25 @@ $CurrentUser = new User();
                         if($rec['image'] == "")continue;
                     ?>
                 <article class="col-block">
-                  
+
                     <div class="item-entry" data-aos="zoom-in">
                         <div class="item-entry__thumb">
                             <a href="singlepost.php?id=<?=$rec['id']?>"><em class="item-entry__thumb-link"></em></a>
                                 <img src="./image/<?=$rec['image']?>"/>
-                                     
+
                             </a>
                         </div>
-        
-                        <div class="item-entry__text">    
+
+                        <div class="item-entry__text">
                             <h1 class="item-entry__title"><a href="singlepost.php?id=<?=$rec['id']?>"><?=$rec['title']?></a></h1>
-                                
+
                             <div class="item-entry__date">
                                 <a href="singlepost.php?id=<?=$row['id']?>"><?=$rec['created_at']?></a>
                             </div>
                         </div>
-                   
+
                     </div> <!-- item-entry -->
-                 
+
                 </article>
                  <?php
                  $x++;
@@ -239,16 +239,16 @@ $CurrentUser = new User();
 
     <!-- s-extra
     ================================================== -->
-     
+
     <section class="s-extra">
 
         <div class="row">
             <?php if($select_res != ""){
-		  
-          
+
+
                  ?>
             <div class="col-seven md-six tab-full popular">
-            
+
                 <h3>Popular Posts</h3>
                    <?php  $x=0;
                     foreach($select_res as $rec){
@@ -257,7 +257,7 @@ $CurrentUser = new User();
                 <div class="block-1-2 block-m-full popular__posts">
                     <article class="col-block popular__post">
                         <a href="singlepost.php?id=<?=$rec['id']?>" class="popular__thumb">
-                     
+
                             <img src="./image/<?=$rec['image']?>"/>
                         </a>
                         <h5><a href="singlepost.php?id=<?=$rec['id']?>"><?=$rec['title']?></h5>
@@ -268,7 +268,7 @@ $CurrentUser = new User();
                     </article>
                     <article class="col-block popular__post">
                         <a href="singlepost.php?id=<?=$rec['id']?>" class="popular__thumb">
-                     
+
                             <img src="./image/<?=$rec['image']?>"/>
                         </a>
                         <h5><a href="singlepost.php?id=<?=$rec['id']?>"><?=$rec['title']?></h5>
@@ -277,7 +277,7 @@ $CurrentUser = new User();
                             <span class="popular__date"><span>on</span> <a href="singlepost.php?id=<?=$row['id']?>"><?=$rec['created_at']?></a></span>
                         </section>
                     </article>
-      
+
                 </div> <!-- end popular_posts -->
                  <?php
                  $x++;
@@ -292,20 +292,19 @@ $CurrentUser = new User();
                 <div class="row">
                     <div class="col-six md-six mob-full categories">
                         <h3>Categories</h3>
-        
+
                         <ul class="linklist">
                             <li><a href="#0">Lifestyle</a></li>
                             <li><a href="#0">Travel</a></li>
                             <li><a href="#0">Recipes</a></li>
                             <li><a href="#0">Management</a></li>
                             <li><a href="#0">Health</a></li>
-                            <li><a href="#0">Creativity</a></li>
                         </ul>
                     </div> <!-- end categories -->
-        
+
                     <div class="col-six md-six mob-full sitelinks">
                         <h3>Site Links</h3>
-        
+
                         <ul class="linklist">
                             <li><a href="#0">Home</a></li>
                             <li><a href="#0">Blog</a></li>
@@ -328,9 +327,9 @@ $CurrentUser = new User();
 
         <div class="s-footer__main">
             <div class="row">
-                
+
                 <div class="col-six tab-full s-footer__about">
-                        
+
                     <h4>About Wordsmith</h4>
 
                     <p></p>
@@ -338,7 +337,7 @@ $CurrentUser = new User();
                 </div> <!-- end s-footer__about -->
 
                 <div class="col-six tab-full s-footer__subscribe">
-                        
+
                     <h4>Our Newsletter</h4>
 
                     <p></p>
@@ -347,11 +346,11 @@ $CurrentUser = new User();
                         <form id="mc-form" class="group" novalidate="true">
 
                             <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
-                
+
                             <input type="submit" name="subscribe" value="Send">
-                
+
                             <label for="mc-email" class="subscribe-message"></label>
-                
+
                         </form>
                     </div>
 
@@ -391,7 +390,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 </span>
                     </div>
                 </div>
-                
+
             </div>
         </div> <!-- end s-footer__bottom -->
 
